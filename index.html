@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <title>Badbad Music</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        background-color: #e52a42;
+      }
+
+      .playlist {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .playlist ul {
+        background-color: #111111;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      .playlist ul li {
+        color: #fff;
+        align-items: center;
+        flex: 1;
+        flex-direction: row;
+        display: flex;
+      }
+
+      .playlist ul li span {
+        padding: 1rem 5rem;
+      }
+
+      .container {
+        padding: 5rem 12rem 0px 12rem;
+      }
+
+      .info {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        min-height: 100px;
+        height: 10vh;
+        display: flex;
+        background-color: #111111;
+      }
+
+      .info div {
+        flex: 1;
+      }
+
+      .info .music {
+        padding-left: 10rem;
+      }
+
+      .info .music img {
+        position: absolute;
+        top: -2rem;
+      }
+
+      .info .music .music-info {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin-left: 7rem;
+      }
+
+      .info .music .music-info h3 {
+        margin: 1rem;
+      }
+
+      .info .music .music-info span {
+        font-size: 10pt;
+        margin: 1rem;
+      }
+
+      .info .player-control {
+        display: flex;
+        align-items: center;
+        padding-right: 9rem;
+      }
+
+      .info .player-control button {
+        padding: 1rem 2rem;
+        border: none;
+        margin: 1.2rem 0px;
+        border-radius: 10rem;
+        background-color: #252525;
+        color: #e52a42;
+        transition: 0.5s;
+      }
+
+      .info .player-control button:hover {
+        background-color: #e52a42;
+        color: #252525;
+        cursor: pointer;
+      }
+
+      .info .player-control span {
+        color: #fff;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        align-self: flex-end;
+      }
+
+      .info .player-control .timer {
+        right: 0;
+        top: -20px;
+      }
+
+      .info .player-control .volume {
+        right: -35px;
+        top: -6px;
+      }
+
+      .info .player-control .bar {
+        margin-left: 1rem;
+        max-width: 80%;
+        position: relative;
+        height: 5px;
+        background-color: #fff;
+      }
+
+      .info .player-control .bar:hover {
+        cursor: pointer;
+      }
+
+      .info .player-control .bar .bar-content {
+        background-color: #f60038;
+        max-width: 50%;
+        height: 5px;
+      }
+
+      @media (max-width: 575.98px) {
+        .info {
+          flex-direction: column;
+          min-height: 100px;
+          height: 25vh;
+        }
+
+        .info .music {
+          padding-left: 0rem;
+        }
+
+        .info .music img {
+          display: none;
+          padding-left: 0rem;
+        }
+
+        .info .music .music-info {
+          margin-left: 0rem;
+        }
+
+        .info .player-control {
+          padding: 0rem 1rem;
+        }
+
+        .info .player-control .bar {
+          max-width: 78%;
+        }
+      }
+
+      @media (min-width: 575.99px) and (max-width: 767.98px) {
+        .info .music {
+          padding-left: 2rem;
+        }
+      }
+
+      @media (min-width: 767.99px) and (max-width: 991.98px) {
+        .info .music {
+          padding-left: 5rem;
+        }
+
+        .info .player-control .bar {
+          max-width: 100%;
+        }
+      }
+
+      @media (min-width: 991.99px) and (max-width: 1199.98px) {
+        .info .music {
+          padding-left: 5rem;
+        }
+
+        .info .player-control {
+          padding-right: 0rem;
+        }
+
+        .info .player-control .bar {
+          max-width: 65%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="playlist">
+        <ul>
+          <li>
+            <span>#</span>
+            <span>Title</span>
+            <span>time</span>
+          </li>
+          <li>
+            <span>1</span>
+            <span>Ainda tem</span>
+            <span>04:03</span>
+          </li>
+          <li>
+            <span>#</span>
+            <span>Title</span>
+
+            <span>time</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="info">
+      <div class="music">
+        <img src="./img/01.jpg" />
+        <div class="music-info">
+          <div class="music-title">
+            <h3>Freio da Blazer</h3>
+          </div>
+          <div>
+            <span>L7NNON</span>
+          </div>
+        </div>
+      </div>
+      <div class="player-control">
+        <button>
+          <i class="fas fa-play"></i>
+        </button>
+        <div>
+          <div class="bar">
+            <span class="timer">00:00/03:35</span>
+            <span class="volume"> <i class="fas fa-volume-up"></i></span>
+            <div class="bar-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
