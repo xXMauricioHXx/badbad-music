@@ -32,13 +32,21 @@
 
       .playlist {
         font-family: "Roboto", sans-serif;
+        max-width: 495px;
       }
 
       .playlist ul {
         background-color: #111111;
         list-style: none;
+        padding: 0px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+      }
+
+      .playlist ul li:nth-child(1) {
+        border-bottom: 1px solid #e52a42;
+        font-weight: bold;
       }
 
       .playlist ul li {
@@ -47,10 +55,23 @@
         flex: 1;
         flex-direction: row;
         display: flex;
+        justify-content: center;
       }
 
-      .playlist ul li span {
-        padding: 1rem 5rem;
+      .playlist ul li span:not(:first-child) {
+        display: block;
+        width: 45%;
+        max-width: 45%;
+        overflow: hidden;
+        padding: 1rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .playlist ul li span:first-child {
+        display: block;
+        width: 10%;
+        padding: 1rem;
       }
 
       .container {
@@ -219,18 +240,28 @@
           <li>
             <span>#</span>
             <span>Title</span>
-            <span>time</span>
+            <span>Artist</span>
+            <span>Time</span>
           </li>
           <li>
             <span>1</span>
             <span>Ainda tem</span>
+            <span>Rashid</span>
             <span>04:03</span>
           </li>
           <li>
-            <span>#</span>
-            <span>Title</span>
-
-            <span>time</span>
+            <span>2</span>
+            <span>Djonga - JUNHO DE 94</span>
+            <span>Djonga</span>
+            <span>05:29</span>
+          </li>
+          <li>
+            <span>3</span>
+            <span
+              >Coruja BC1 - MODO F (J Cole - A Tale of 2 Cities - REMIX)</span
+            >
+            <span>Coruja BC1</span>
+            <span>04:31</span>
           </li>
         </ul>
       </div>
